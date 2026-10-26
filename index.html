@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Estudio Aura — Peluquería &amp; Color</title>
+<meta name="description" content="Estudio Aura: peluquería especializada en color, balayage, corte y tratamientos. Reservá tu turno por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6F0; --ink:#2B211B; --muted:#7A6A5E; --brand:#B07D4F; --brand-dark:#96683E;
+  --sand:#F2E8DC; --sand-2:#EADCC9; --line:#E5D9C8; --wa:#22C064; --wa-dark:#1BA856;
+  --r-sm:14px; --r-md:20px; --r-lg:28px;
+  --shadow:0 18px 40px -18px rgba(43,33,27,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100% - 3rem);margin-inline:auto}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--brand-dark)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-dark)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--brand);border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.6rem;border-radius:999px;font-weight:800;font-size:.95rem;text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 26px -12px rgba(34,192,100,.55)}
+.btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-dark)}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-brand:hover{background:var(--brand-dark);transform:translateY(-2px)}
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-in{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--brand)}
+nav.main{display:flex;gap:1.8rem}
+nav.main a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--muted)}
+nav.main a:hover{color:var(--brand-dark)}
+header .btn{padding:.6rem 1.15rem;font-size:.88rem}
+@media(max-width:760px){nav.main{display:none}}
+/* Hero */
+.hero{padding:3.2rem 0 4.2rem;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:3rem;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:2.2rem}}
+.hero h1{font-size:clamp(2.7rem,6vw,4.3rem);margin:1rem 0 1.1rem}
+.hero p.lead{font-size:1.13rem;color:var(--muted);max-width:34rem;margin-bottom:1.8rem}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+.hero-note{margin-top:1.1rem;font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:.45rem}
+.hero-note svg{width:16px;height:16px;color:var(--brand)}
+.hero-media{position:relative}
+.hero-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/4.6;position:relative;isolation:isolate}
+.hero-photo img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1) translateY(0)}to{transform:scale(1.09) translateY(-1.5%)}}
+.rating-card{position:absolute;left:-1.4rem;bottom:1.6rem;background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow);padding:.95rem 1.2rem;max-width:250px}
+@media(max-width:900px){.rating-card{left:.8rem}}
+.rating-card .stars{color:#E8A33D;letter-spacing:.15em;font-size:.95rem}
+.rating-card strong{display:block;font-size:1.02rem;margin:.15rem 0 .1rem}
+.rating-card small{color:var(--muted);font-size:.82rem;line-height:1.45;display:block}
+/* Cifras */
+.cifras{background:var(--ink);color:#F5EDE3;border-radius:var(--r-lg);padding:2.1rem 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:center}
+@media(max-width:700px){.cifras{grid-template-columns:1fr;gap:1.2rem}}
+.cifras .num{font-family:'Cormorant Garamond',serif;font-size:2.9rem;font-weight:700;line-height:1;color:#E9C496}
+.cifras .lbl{font-size:.9rem;color:#CBBBA7;margin-top:.35rem}
+/* Secciones */
+section{padding:4.4rem 0}
+.sec-head{max-width:40rem;margin-bottom:2.4rem}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin:.8rem 0 .7rem}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+/* Servicios */
+.serv-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem}
+.serv{border-radius:var(--r-lg);overflow:hidden;position:relative;min-height:300px;text-decoration:none;display:flex;align-items:flex-end;isolation:isolate}
+.serv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;transition:transform .6s ease}
+.serv:hover img{transform:scale(1.05)}
+.serv::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,33,27,0) 38%,rgba(43,33,27,.82));z-index:-1}
+.serv .serv-body{padding:1.4rem;color:#FBF4EA;width:100%}
+.serv .icon-chip{display:inline-flex;width:44px;height:44px;border-radius:var(--r-sm);background:var(--brand);color:#fff;align-items:center;justify-content:center;margin-bottom:.7rem}
+.serv .icon-chip svg{width:23px;height:23px}
+.serv h3{font-size:1.65rem;color:#fff;margin-bottom:.25rem}
+.serv p{font-size:.92rem;color:#EBDCC8;max-width:26rem}
+.serv.big{grid-column:span 7;min-height:380px}
+.serv.small{grid-column:span 5;min-height:380px}
+.serv.half{grid-column:span 6;min-height:320px}
+@media(max-width:820px){.serv.big,.serv.small,.serv.half{grid-column:span 12;min-height:300px}}
+/* Comparador */
+.comp-sec{background:var(--sand);border-radius:var(--r-lg);padding:3rem 2rem}
+@media(max-width:700px){.comp-sec{padding:2.2rem 1.2rem}}
+.comp{position:relative;border-radius:var(--r-md);overflow:hidden;max-width:760px;margin:0 auto;aspect-ratio:4/3;touch-action:none;user-select:none;box-shadow:var(--shadow)}
+.comp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.comp .top{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.comp .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(43,33,27,.15);pointer-events:none}
+.comp .knob{position:absolute;top:50%;left:var(--pos,50%);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);color:var(--brand-dark);pointer-events:none}
+.comp .knob svg{width:22px;height:22px}
+.comp .tag{position:absolute;top:1rem;padding:.32rem .8rem;border-radius:999px;background:rgba(43,33,27,.78);color:#FBF4EA;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;pointer-events:none}
+.comp .tag.before{left:1rem}.comp .tag.after{right:1rem}
+.comp-hint{text-align:center;color:var(--muted);font-size:.9rem;margin-top:1rem}
+/* Estudio */
+.estudio-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+@media(max-width:900px){.estudio-grid{grid-template-columns:1fr;gap:2rem}}
+.estudio-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.estudio-photo img{width:100%;height:100%;object-fit:cover}
+.datos{display:grid;gap:1rem;margin-top:1.6rem}
+.dato{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:1rem 1.15rem}
+.dato svg{width:22px;height:22px;color:var(--brand);flex:none;margin-top:.15rem}
+.dato strong{display:block;font-size:.98rem}
+.dato span{color:var(--muted);font-size:.92rem}
+/* Equipo */
+.equipo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media(max-width:820px){.equipo-grid{grid-template-columns:1fr}}
+.persona{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.persona img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.persona .p-body{padding:1.2rem 1.3rem 1.4rem}
+.persona h3{font-size:1.5rem}
+.persona .rol{color:var(--brand-dark);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin:.15rem 0 .45rem}
+.persona p{color:var(--muted);font-size:.93rem}
+/* Pasos */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media(max-width:820px){.pasos{grid-template-columns:1fr}}
+.paso{background:var(--sand);border-radius:var(--r-lg);padding:1.7rem 1.5rem}
+.paso .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--brand);line-height:1}
+.paso h3{font-size:1.45rem;margin:.5rem 0 .35rem}
+.paso p{color:var(--muted);font-size:.94rem}
+/* Cierre */
+.cierre{background:var(--ink);color:#F5EDE3;border-radius:var(--r-lg);padding:3.2rem 2rem;text-align:center}
+.cierre h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-bottom:.8rem}
+.cierre h2 em{color:#E9C496}
+.cierre p{color:#CBBBA7;max-width:32rem;margin:0 auto 1.9rem}
+footer{padding:2.4rem 0 6.4rem;color:var(--muted);font-size:.9rem}
+.footer-in{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.6rem}
+footer .fine{width:100%;font-size:.8rem;color:#A08D7C}
+/* Flotante */
+.wa-float{position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -10px rgba(34,192,100,.6);transition:transform .2s ease}
+.wa-float:hover{transform:translateY(-3px)}
+.wa-float svg{width:29px;height:29px;color:#fff}
+@media (prefers-reduced-motion: reduce){
+  .hero-photo img{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#">estudio<span>·</span>aura</a>
+    <nav class="main">
+      <a href="#servicios">Servicios</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20reservar%20un%20turno" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+      Reservar turno
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div data-reveal>
+        <span class="eyebrow">Peluquería &amp; color — Recoleta</span>
+        <h1>Color que se nota, <em>pelo que se siente</em></h1>
+        <p class="lead">Balayage, corte y tratamientos con diagnóstico antes de tocarte el pelo. Reservás por WhatsApp, venís a tu turno y salís con el plan de cuidado para mantenerlo en casa.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-wa" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20reservar%20un%20turno" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+            Reservá tu turno
+          </a>
+          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+        </div>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Diagnóstico y presupuesto sin cargo, antes de empezar
+        </p>
+      </div>
+      <div class="hero-media" data-reveal>
+        <div class="hero-photo">
+          <img src="img/hero.jpg" alt="Clienta con ondas castañas brillantes sonriendo en el estudio">
+        </div>
+        <div class="rating-card">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>4,9 de valoración</strong>
+          <small>Más de 2.400 clientas ya pasaron por el estudio</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CIFRAS -->
+  <div class="wrap">
+    <div class="cifras" data-reveal>
+      <div><div class="num"><span data-count="12">0</span></div><div class="lbl">años de oficio</div></div>
+      <div><div class="num">+<span data-count="2400">0</span></div><div class="lbl">clientas que volvieron</div></div>
+      <div><div class="num"><span data-count="35">0</span> min</div><div class="lbl">brushing exprés, de lunes a viernes</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2>Especialistas en <em>color</em>, de verdad</h2>
+        <p>Cada servicio arranca con un diagnóstico de tu pelo: qué tiene, qué aguanta y qué resultado es realista. Sin sorpresas en el espejo ni en el precio.</p>
+      </div>
+      <div class="serv-grid">
+        <a class="serv big" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20color%20y%20balayage" target="_blank" rel="noopener" data-reveal>
+          <img src="img/color.jpg" alt="Colorista aplicando color a una clienta en el estudio">
+          <div class="serv-body">
+            <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2.5 3.2 6 6.6 6 10.2A6 6 0 0 1 6 13.2C6 9.6 9.5 6.2 12 3z"/></svg></span>
+            <h3>Color y balayage</h3>
+            <p>Balayage, babylights y color completo cuidando la fibra: decoloramos lo justo para que el pelo siga sano.</p>
+          </div>
+        </a>
+        <a class="serv small" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20un%20corte" target="_blank" rel="noopener" data-reveal>
+          <img src="img/corte.jpg" alt="Estilista recortando el pelo con peine y tijera">
+          <div class="serv-body">
+            <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.2 7.8 20 19M8.2 16.2 20 5"/></svg></span>
+            <h3>Corte de diseño</h3>
+            <p>Cortes que crecen bien y se peinan fácil en tu casa, no solo el día que salís del estudio.</p>
+          </div>
+        </a>
+        <a class="serv half" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20brushing%20y%20peinados" target="_blank" rel="noopener" data-reveal>
+          <img src="img/brushing.jpg" alt="Estilista haciendo brushing con secador y cepillo en pelo largo">
+          <div class="serv-body">
+            <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8c4-1 6 1 10 0 3-.8 5-2.6 8-2.4M3 13c4-1 6 1 10 0 3-.8 5-2.6 8-2.4M3 18c3-.8 5 .6 8 0"/></svg></span>
+            <h3>Brushing y peinados</h3>
+            <p>Brushing, ondas y recogidos para eventos, con productos que no dejan el pelo pesado.</p>
+          </div>
+        </a>
+        <a class="serv half" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20tratamientos%20capilares" target="_blank" rel="noopener" data-reveal>
+          <img src="img/lavado.jpg" alt="Lavado de cabeza relajante en la bacha del estudio">
+          <div class="serv-body">
+            <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4.5-2.3-8-5.6-8-10V5.5L12 3l8 2.5V11c0 4.4-3.5 7.7-8 10z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg></span>
+            <h3>Tratamientos capilares</h3>
+            <p>Reconstrucción, keratina y bótox capilar según el estado real de tu pelo, no por catálogo.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARADOR -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="comp-sec" data-reveal>
+        <div class="sec-head" style="margin-inline:auto;text-align:center">
+          <span class="eyebrow" style="justify-content:center">Antes / después</span>
+          <h2>Arrastrá y mirá el <em>resultado</em></h2>
+          <p>Del color en proceso al pelo terminado: brillo, movimiento y nada de puntas castigadas.</p>
+        </div>
+        <div class="comp" id="comparador" role="slider" aria-label="Comparador antes y después del color" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+          <img src="img/resultado.jpg" alt="Resultado final: pelo largo, brillante y con movimiento">
+          <img class="top" src="img/proceso.jpg" alt="Color en proceso, con broches y mechas separadas">
+          <span class="tag before">En proceso</span>
+          <span class="tag after">Resultado</span>
+          <div class="handle"></div>
+          <div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6-5 6 5 6M15 6l5 6-5 6"/></svg></div>
+        </div>
+        <p class="comp-hint">Mové la barra para comparar el antes y el después</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTUDIO -->
+  <section id="estudio" style="padding-top:0">
+    <div class="wrap estudio-grid">
+      <div class="estudio-photo" data-reveal>
+        <img src="img/interior.jpg" alt="Interior luminoso del estudio con puestos de peinado modernos">
+      </div>
+      <div data-reveal>
+        <span class="eyebrow">El estudio</span>
+        <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin:.8rem 0 .7rem">Un solo salón, <em>atención de boutique</em></h2>
+        <p style="color:var(--muted)">Trabajamos con turnos espaciados: nunca hay tres clientas esperando ni trabajos a las corridas. Tu colorista te recibe, te hace el diagnóstico y te acompaña hasta que salís.</p>
+        <div class="datos">
+          <div class="dato">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div><strong>Av. Santa Fe 2450, Recoleta</strong><span>A 3 cuadras de la estación de subte. Estacionamiento a la vuelta.</span></div>
+          </div>
+          <div class="dato">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div><strong>Martes a sábados, 9:00 a 20:00</strong><span>Los colores largos se agendan hasta las 16:00 para trabajarlos sin apuro.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Equipo</span>
+        <h2>Las manos detrás de <em>cada trabajo</em></h2>
+        <p>Tres especialistas, un criterio: primero la salud del pelo, después el color.</p>
+      </div>
+      <div class="equipo-grid">
+        <article class="persona" data-reveal>
+          <img src="img/equipo1.jpg" alt="Martina trabajando con clientas en el estudio">
+          <div class="p-body">
+            <h3>Martina Ríos</h3>
+            <p class="rol">Colorista senior</p>
+            <p>Rubios y balayage. Si tu pelo no está para decolorar, te lo dice y te propone el plan B.</p>
+          </div>
+        </article>
+        <article class="persona" data-reveal>
+          <img src="img/equipo2.jpg" alt="Camila peinando a una clienta en el estudio">
+          <div class="p-body">
+            <h3>Camila Duarte</h3>
+            <p class="rol">Corte y peinado</p>
+            <p>Cortes que se mantienen solos y peinados de evento que duran toda la noche.</p>
+          </div>
+        </article>
+        <article class="persona" data-reveal>
+          <img src="img/equipo3.jpg" alt="Valentina haciendo un brushing a una clienta mayor">
+          <div class="p-body">
+            <h3>Valentina Sosa</h3>
+            <p class="rol">Tratamientos</p>
+            <p>Reconstrucción y cuidado capilar. Arma tu rutina para que el resultado dure en casa.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASOS -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow">Cómo reservás</span>
+        <h2>Tu turno en <em>tres pasos</em></h2>
+      </div>
+      <div class="pasos">
+        <div class="paso" data-reveal><div class="n">1</div><h3>Escribinos por WhatsApp</h3><p>Contanos qué querés hacerte y, si tenés, mandanos una foto de tu pelo y una de referencia.</p></div>
+        <div class="paso" data-reveal><div class="n">2</div><h3>Diagnóstico sin cargo</h3><p>Te decimos qué se puede lograr, cuánto tarda y cuánto sale. Sin compromiso.</p></div>
+        <div class="paso" data-reveal><div class="n">3</div><h3>Turno confirmado</h3><p>Elegís día y horario y te lo confirmamos en el momento. Te recordamos el día anterior.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section id="contacto" style="padding-top:0">
+    <div class="wrap">
+      <div class="cierre" data-reveal>
+        <h2>¿Lista para tu <em>próximo color</em>?</h2>
+        <p>Escribinos ahora y te hacemos el diagnóstico sin cargo. Los turnos de la semana se completan rápido.</p>
+        <a class="btn btn-wa" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20reservar%20un%20turno" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-in">
+    <div><strong style="color:var(--ink)">estudio·aura</strong><br>Av. Santa Fe 2450, Recoleta — Buenos Aires</div>
+    <div>Martes a sábados · 9:00 a 20:00<br>WhatsApp +54 9 11 0000-0000</div>
+    <p class="fine">Vidriera de demostración creada por Nexvia IA. Marca, equipo y datos ficticios; fotografías de Pexels.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20reservar%20un%20turno" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* Contadores (funcionan con o sin GSAP) */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'),10);
+    if(reduce){ el.textContent = target.toLocaleString('es-AR'); return; }
+    var start = null, dur = 1400;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      el.textContent = Math.round(target * (1-Math.pow(1-p,3))).toLocaleString('es-AR');
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counted = new WeakSet();
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !counted.has(e.target)){ counted.add(e.target); animateCount(e.target); io.unobserve(e.target); }
+    });
+  },{threshold:.4});
+  document.querySelectorAll('[data-count]').forEach(function(el){ io.observe(el); });
+
+  /* Comparador antes/despues */
+  var comp = document.getElementById('comparador');
+  if(comp){
+    function setPos(clientX){
+      var r = comp.getBoundingClientRect();
+      var pct = Math.max(2, Math.min(98, ((clientX - r.left)/r.width)*100));
+      comp.style.setProperty('--pos', pct + '%');
+      comp.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    var dragging = false;
+    comp.addEventListener('pointerdown', function(e){ dragging = true; comp.setPointerCapture(e.pointerId); setPos(e.clientX); });
+    comp.addEventListener('pointermove', function(e){ if(dragging) setPos(e.clientX); });
+    comp.addEventListener('pointerup', function(){ dragging = false; });
+    comp.addEventListener('pointercancel', function(){ dragging = false; });
+    comp.addEventListener('keydown', function(e){
+      var cur = parseFloat(getComputedStyle(comp).getPropertyValue('--pos')) || 50;
+      if(e.key === 'ArrowLeft'){ comp.style.setProperty('--pos', Math.max(2,cur-4)+'%'); e.preventDefault(); }
+      if(e.key === 'ArrowRight'){ comp.style.setProperty('--pos', Math.min(98,cur+4)+'%'); e.preventDefault(); }
+    });
+  }
+
+  if(reduce) return;
+  /* Lenis + GSAP */
+  var lenis = null;
+  if(window.Lenis){
+    lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }
+  if(window.gsap && window.ScrollTrigger){
+    gsap.registerPlugin(ScrollTrigger);
+    if(lenis){ lenis.on('scroll', ScrollTrigger.update); }
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      gsap.from(el, { opacity: 0, y: 26, duration: .9, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' } });
+    });
+    gsap.to('.hero-photo img', { yPercent: 6, ease: 'none',
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  }
+})();
+</script>
+</body>
+</html>
