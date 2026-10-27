@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es-419">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <title>Estudio Aura — Peluquería &amp; Color</title>
 <meta name="description" content="Estudio Aura: peluquería especializada en color, balayage, corte y tratamientos. Reservá tu turno por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +72,7 @@ header .btn{padding:.6rem 1.15rem;font-size:.88rem}
 .cifras .lbl{font-size:.9rem;color:#CBBBA7;margin-top:.35rem}
 /* Secciones */
 section{padding:4.4rem 0}
+#servicios,#estudio,#equipo,#contacto{scroll-margin-top:88px}
 .sec-head{max-width:40rem;margin-bottom:2.4rem}
 .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);margin:.8rem 0 .7rem}
 .sec-head p{color:var(--muted);font-size:1.05rem}
@@ -200,7 +202,7 @@ footer .fine{width:100%;font-size:.8rem;color:#A08D7C}
   <div class="wrap">
     <div class="cifras" data-reveal>
       <div><div class="num"><span data-count="12">0</span></div><div class="lbl">años de oficio</div></div>
-      <div><div class="num">+<span data-count="2400">0</span></div><div class="lbl">clientas que volvieron</div></div>
+      <div><div class="num">+<span data-count="2400">0</span></div><div class="lbl">clientas atendidas</div></div>
       <div><div class="num"><span data-count="35">0</span> min</div><div class="lbl">brushing exprés, de lunes a viernes</div></div>
     </div>
   </div>
@@ -314,7 +316,7 @@ footer .fine{width:100%;font-size:.8rem;color:#A08D7C}
           </div>
         </article>
         <article class="persona" data-reveal>
-          <img src="img/equipo2.jpg" alt="Camila peinando a una clienta en el estudio">
+          <img src="img/equipo2.jpg" alt="Estilista aplicando color en el cabello de una clienta">
           <div class="p-body">
             <h3>Camila Duarte</h3>
             <p class="rol">Corte y peinado</p>
@@ -322,7 +324,7 @@ footer .fine{width:100%;font-size:.8rem;color:#A08D7C}
           </div>
         </article>
         <article class="persona" data-reveal>
-          <img src="img/equipo3.jpg" alt="Valentina haciendo un brushing a una clienta mayor">
+          <img src="img/equipo3.jpg" alt="Estilista sin barbijo lavando el cabello de una clienta en el lavacabezas">
           <div class="p-body">
             <h3>Valentina Sosa</h3>
             <p class="rol">Tratamientos</p>
@@ -418,8 +420,8 @@ footer .fine{width:100%;font-size:.8rem;color:#A08D7C}
     comp.addEventListener('pointercancel', function(){ dragging = false; });
     comp.addEventListener('keydown', function(e){
       var cur = parseFloat(getComputedStyle(comp).getPropertyValue('--pos')) || 50;
-      if(e.key === 'ArrowLeft'){ comp.style.setProperty('--pos', Math.max(2,cur-4)+'%'); e.preventDefault(); }
-      if(e.key === 'ArrowRight'){ comp.style.setProperty('--pos', Math.min(98,cur+4)+'%'); e.preventDefault(); }
+      if(e.key === 'ArrowLeft'){ cur = Math.max(2,cur-4); comp.style.setProperty('--pos', cur+'%'); comp.setAttribute('aria-valuenow', Math.round(cur)); e.preventDefault(); }
+      if(e.key === 'ArrowRight'){ cur = Math.min(98,cur+4); comp.style.setProperty('--pos', cur+'%'); comp.setAttribute('aria-valuenow', Math.round(cur)); e.preventDefault(); }
     });
   }
 
